@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container-01">
+        <p class="bill">bill</p>
+        <input type="text" placeholder="0" value="0" />
 
-  Bill
+        <p class="select-tip">select tip %</p>
+        <input type="button" value="5" placeholder="5%" />
+        <input type="button" value="10" placeholder="10%" />
+        <input type="button" value="15" placeholder="15%" />
+        <input type="button" value="25" placeholder="25%" />
+        <input type="button" value="50" placeholder="50%" />
+        <input type="text" value="0" placeholder="custom" />
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <p class="number-people">number of people</p>
+        <input type="text" placeholder="0" value="0" />
+      </div>
+      <div class="container-02">
+        <p class="tip-amount">tip-amount <span>/person</span></p>
+        <div class="tip">$0.00</div>
+        <p class="tip-amount">total <span>/person</span></p>
+        <div class="tip">$0.00</div>
+        <button class="reset">reset</button>
+      </div>
+    </main>
+  </body>
 </html>
