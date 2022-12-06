@@ -10,12 +10,18 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="App.css" />
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
     <main class="main">
-      <div class="container-01">
+      <div class="box-01">
         <p class="bill">bill</p>
         <input type="text" placeholder="0" value="0" />
 
@@ -30,11 +36,15 @@
         <p class="number-people">number of people</p>
         <input type="text" placeholder="0" value="0" />
       </div>
-      <div class="container-02">
-        <p class="tip-amount">tip-amount <span>/person</span></p>
-        <div class="tip">$0.00</div>
-        <p class="tip-amount">total <span>/person</span></p>
-        <div class="tip">$0.00</div>
+      <div class="box-02">
+        <div class="mini-box">
+          <p class="tip-amount">tip-amount <span>/person</span></p>
+          <div class="tip">$0.00</div>
+        </div>
+        <div class="mini-box">
+          <p class="tip-amount">total <span>/person</span></p>
+          <div class="tip">$0.00</div>
+        </div>
         <button class="reset">reset</button>
       </div>
     </main>
