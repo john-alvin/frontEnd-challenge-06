@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--Light-grayish-cyan);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  background-color: var(--White);
+  padding: 2rem;
+}
+
+.box-02 {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.mini-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.mini-box .tip {
+  font-size: 1.8rem;
+  color: var(--Strong-cyan);
+}
+span {
+  display: block;
+  font-size: 12px;
+  color: var(--Grayish-cyan);
+}
+.reset {
+  width: 100%;
+  background-color: var(--Strong-cyan);
+  padding: 10px 0;
+  font-weight: 700;
+  border: none;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
