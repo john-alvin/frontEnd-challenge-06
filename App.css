@@ -38,7 +38,8 @@ body {
 }
 .bill-title,
 .select-tip,
-.number-people-box {
+.number-people-box,
+.people {
   color: var(--Grayish-cyan);
 }
 .bills-box,
@@ -50,6 +51,11 @@ body {
   border-radius: 5px;
   color: var(--Very-dark-cyan);
   margin-bottom: 1rem;
+  border: none;
+}
+.bills-box::placeholder,
+.number-people-box::placeholder {
+  color: var(--Grayish-cyan);
 }
 .tip-container {
   display: grid;
