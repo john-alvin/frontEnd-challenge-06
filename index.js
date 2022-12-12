@@ -7,6 +7,15 @@ const reset = document.querySelector(".reset");
 
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
-    console.log((btn[i].value * 100) / 100);
+    // tip percentage for the bill
+    let tip = (btn[i].value / 100) * inputBill.value;
+
+    // tip amount per person
+    let tipAmount = tip / numberOfPeople.value;
+
+    // total bill for each person
+    let totalForPerson = parseInt(inputBill.value) + tip;
+
+    console.log(totalForPerson);
   });
 }
