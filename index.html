@@ -22,7 +22,10 @@
   <body>
     <main class="main">
       <div class="box-01">
-        <p class="bill-title">bill</p>
+        <p class="bill-title">
+          bill <span class="error hidden">Can't be zero!</span>
+        </p>
+
         <input type="text" class="bills-box" placeholder="0.00" />
         <p class="select-tip">select tip %</p>
         <div class="tip-container">
@@ -33,7 +36,10 @@
           <button class="btn" value="50">50%</button>
           <input class="input" type="text" placeholder="custom" />
         </div>
-        <p class="people">number of people</p>
+        <p class="people">
+          number of people <span class="error hidden">Can't be zero!</span>
+        </p>
+
         <input type="text" class="number-people-box" placeholder="0.00" />
       </div>
       <div class="box-02">
