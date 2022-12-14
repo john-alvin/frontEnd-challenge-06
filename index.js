@@ -6,6 +6,7 @@ const numberOfPeople = document.querySelector(".number-people-box");
 const reset = document.querySelector(".reset");
 const displayTip = document.querySelector(".tip-money");
 const displayTotal = document.querySelector(".total-tip");
+const error = document.querySelectorAll(".error");
 
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
@@ -18,7 +19,13 @@ for (let i = 0; i < btn.length; i++) {
     // total bill for each person
     let totalForPerson = parseInt(inputBill.value) + tip;
 
-    displayTip.textContent = tipAmount;
-    displayTotal.textContent = totalForPerson;
+    if (isNaN(tipAmount) && isNaN(totalForPerson)) {
+      for (let i = 0; i < error.length; i++) {
+        error[i].classList.remove("hidden");
+      }
+    } else {
+      displayTip.textContent = tipAmount.toFixed(2);
+      displayTotal.textContent = totalForPerson;
+    }
   });
 }
