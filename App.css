@@ -13,6 +13,7 @@
   --Light-grayish-cyan: hsl(185, 41%, 84%);
   --Very-light-grayish-cyan: hsl(189, 41%, 97%);
   --White: hsl(0, 0%, 100%);
+  --Red: hsl(0, 100%, 50%);
 }
 
 body {
@@ -41,6 +42,7 @@ body {
 .number-people-box,
 .people {
   color: var(--Grayish-cyan);
+  position: relative;
 }
 .bills-box,
 .number-people-box {
@@ -53,6 +55,16 @@ body {
   margin-bottom: 1rem;
   border: none;
 }
+.hidden {
+  display: none;
+}
+.error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--Red);
+}
+
 .bills-box::placeholder,
 .number-people-box::placeholder {
   color: var(--Grayish-cyan);
