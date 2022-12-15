@@ -99,6 +99,11 @@ body {
   background-color: var(--White);
   color: var(--Dark-grayish-cyan);
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .box-02 {
   background-color: var(--Very-dark-cyan);
   color: var(--White);
@@ -113,12 +118,12 @@ body {
   margin-bottom: 20px;
   text-transform: capitalize;
 }
-.tip-money,
-.total-tip {
+
+.tip-money {
   font-size: 1.8rem;
   color: var(--Strong-cyan);
 }
-span {
+.perPerson {
   display: block;
   font-size: 12px;
   color: var(--Grayish-cyan);
