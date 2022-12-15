@@ -26,7 +26,7 @@
           bill <span class="error hidden">Can't be zero!</span>
         </p>
 
-        <input type="text" class="bills-box" placeholder="0.00" />
+        <input type="text" class="bills-box" placeholder="0.00" value="0" />
         <p class="select-tip">select tip %</p>
         <div class="tip-container">
           <button class="btn" value="5">5%</button>
@@ -37,10 +37,16 @@
           <input class="input" type="text" placeholder="custom" />
         </div>
         <p class="people">
-          number of people <span class="error hidden">Can't be zero!</span>
+          number of people
+          <span class="error hidden-people">Can't be zero!</span>
         </p>
 
-        <input type="text" class="number-people-box" placeholder="0.00" />
+        <input
+          type="text"
+          class="number-people-box"
+          placeholder="0.00"
+          value="0"
+        />
       </div>
       <div class="box-02">
         <div class="mini-box">
