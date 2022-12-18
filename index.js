@@ -15,19 +15,27 @@ let value = {
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
     // tip percentage for the bill
-    let tip = parseFloat((btn[i].value / 100) * inputBill.value);
-    let tipAmount = parseFloat(tip / parseInt(numberOfPeople.value));
 
-    console.log(typeof inputBill.value);
+    let bill = inputBill.value * 1;
+    let tip = parseFloat((btn[i].value / 100) * bill);
+
+    let people = numberOfPeople.value * 1;
+    let tipAmount = parseFloat(tip / people);
 
     for (let i = 0; i < error.length; i++) {
-      if (tip === 0) {
+      if (people === 0 && bill === 0) {
         error[i].classList.remove("hidden");
+        error[i].classList.remove("hidden-people");
+      } else if (bill === 0) {
+        error[i].classList.remove("hidden");
+      } else if (people === 0) {
+        error[i].classList.remove("hidden-people");
       } else {
         error[i].classList.add("hidden");
-        console.log(tip);
+        error[i].classList.add("hidden-people");
       }
     }
+
     /*
     // tip amount per person
     let tipAmount = tip / parseInt(numberOfPeople);
