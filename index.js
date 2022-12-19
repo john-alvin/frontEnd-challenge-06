@@ -7,19 +7,34 @@ const reset = document.querySelector(".reset");
 const displayTip = document.querySelector(".tip-person");
 const displayTotal = document.querySelector(".tip-total");
 const error = document.querySelectorAll(".error");
+const custom = document.querySelector(".custom");
 
-let value = {
-  people: 0,
-  bill: 200,
-};
+custom.addEventListener("keydown", calcTotal);
+inputBill.addEventListener("keydown", calcTotal);
+numberOfPeople.addEventListener("keydown", calcTotal);
+
+function calcTotal(e) {
+  if (e.key === "Enter") {
+    let percentage = custom.value / 100;
+    let tip = inputBill.value * percentage;
+    let eachPerson = tip / numberOfPeople.value;
+
+    if (eachPerson === NaN) {
+      displayTip.textContent = 0.0;
+    } else {
+      displayTip.textContent = eachPerson.toFixed(2);
+    }
+  }
+}
+
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
-    // tip percentage for the bill
-
     let bill = inputBill.value * 1;
+    let people = numberOfPeople.value * 1;
+
+    // tip percentage for the bill
     let tip = parseFloat((btn[i].value / 100) * bill);
 
-    let people = numberOfPeople.value * 1;
     let tipAmount = parseFloat(tip / people);
 
     for (let i = 0; i < error.length; i++) {
