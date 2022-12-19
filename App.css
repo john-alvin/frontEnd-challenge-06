@@ -79,7 +79,7 @@ body {
   margin-bottom: 1rem;
 }
 .tip-container > .btn,
-.tip-container > .input {
+.tip-container > .custom {
   border-radius: 5px;
   border: none;
   padding: 0.6rem 0;
@@ -87,6 +87,7 @@ body {
   color: var(--White);
   font-family: "Space Mono", monospace;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .btn {
@@ -95,7 +96,8 @@ body {
 .btn:active {
   background-color: var(--Strong-cyan);
 }
-.input:focus {
+
+.custom:focus {
   background-color: var(--White);
   color: var(--Dark-grayish-cyan);
 }
