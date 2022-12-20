@@ -18,12 +18,9 @@ function calcTotal(e) {
     let percentage = custom.value / 100;
     let tip = inputBill.value * percentage;
     let eachPerson = tip / numberOfPeople.value;
-
-    if (eachPerson === NaN) {
-      displayTip.textContent = 0.0;
-    } else {
-      displayTip.textContent = eachPerson.toFixed(2);
-    }
+    let totalPerson = parseInt(inputBill.value) + eachPerson;
+    displayTip.textContent = eachPerson.toFixed(2);
+    displayTotal.textContent = totalPerson.toFixed(2);
   }
 }
 
