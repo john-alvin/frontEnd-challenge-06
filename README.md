@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://tip-calc-solution.netlify.app/)
+- Live Site URL: [live view here](https://tip-calc-solution.netlify.app/)
 
 ## My process
 
