@@ -138,4 +138,12 @@ input::-webkit-inner-spin-button {
   border: none;
   text-transform: uppercase;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 765px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
 }
