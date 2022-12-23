@@ -9,6 +9,8 @@ const displayTotal = document.querySelector(".tip-total");
 const error = document.querySelectorAll(".error");
 const custom = document.querySelector(".custom");
 
+let zero = 0;
+
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
     let bill = inputBill.value * 1;
@@ -21,7 +23,6 @@ for (let i = 0; i < btn.length; i++) {
     displayTip.textContent = tipAmount.toFixed(2);
     displayTotal.textContent = total.toFixed(2);
 
-    let zero = 0;
     for (let i = 0; i < error.length; i++) {
       if (people === 0 && bill === 0) {
         error[i].classList.remove("hidden");
@@ -60,3 +61,15 @@ function calcTotal(e) {
     }
   }
 }
+
+reset.addEventListener("click", () => {
+  inputBill.value = "";
+  numberOfPeople.value = "";
+  custom.value = "";
+  displayTip.textContent = `${zero.toFixed(2)}`;
+  displayTotal.textContent = `${zero.toFixed(2)}`;
+  for (let i = 0; i < error.length; i++) {
+    error[i].classList.add("hidden");
+    error[i].classList.add("hidden-people");
+  }
+});
